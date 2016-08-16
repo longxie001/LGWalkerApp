@@ -13,6 +13,10 @@
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
+    if (self.isInteractive) {
+        return;
+    }
+    
     UIView *containerView = [transitionContext containerView];
     if (containerView == nil) {
         return;
@@ -64,7 +68,8 @@
                         }];
                     }
                 }else{
-                    [UIView animateWithDuration:self.duration animations:^{
+                
+                    [UIView animateWithDuration:self.transitionDuration delay:0 usingSpringWithDamping:self.Damping initialSpringVelocity:self.Velocity options:UIViewAnimationOptionCurveEaseInOut animations:^{
                         if (self.transitionMode == kLGTransitionPresent) {
                             toView.transform = CGAffineTransformIdentity;
                         }else{
@@ -75,6 +80,18 @@
                         [self transtionFinishedFromView:fromView
                                       animateTransition:transitionContext];
                     }];
+
+//                    [UIView animateWithDuration:self.animationDuration animations:^{
+//                        if (self.transitionMode == kLGTransitionPresent) {
+//                            toView.transform = CGAffineTransformIdentity;
+//                        }else{
+//                            [containerView bringSubviewToFront:fromView];
+//                            fromView.transform = CGAffineTransformMakeTranslation(-transformX, 0);;
+//                        }
+//                    } completion:^(BOOL finished) {
+//                        [self transtionFinishedFromView:fromView
+//                                      animateTransition:transitionContext];
+//                    }];
                 }
             }else{
                 [containerView bringSubviewToFront:toView];
@@ -87,13 +104,23 @@
                                       animateTransition:transitionContext];
                     }];
                 }else{
-                    [UIView animateWithDuration:self.duration animations:^{
+                    
+                    [UIView animateWithDuration:self.transitionDuration delay:0 usingSpringWithDamping:self.Damping initialSpringVelocity:self.Velocity options:UIViewAnimationOptionCurveEaseInOut animations:^{
                         fromView.transform = CGAffineTransformMakeTranslation(-transformX, 0);
                         toView.transform   = CGAffineTransformIdentity;
+
                     } completion:^(BOOL finished) {
                         [self transtionFinishedFromView:fromView
                                       animateTransition:transitionContext];
                     }];
+                    
+//                    [UIView animateWithDuration:self.animationDuration animations:^{
+//                        fromView.transform = CGAffineTransformMakeTranslation(-transformX, 0);
+//                        toView.transform   = CGAffineTransformIdentity;
+//                    } completion:^(BOOL finished) {
+//                        [self transtionFinishedFromView:fromView
+//                                      animateTransition:transitionContext];
+//                    }];
                 }
             }
             break;
@@ -137,7 +164,7 @@
                         }];
                     }
                 }else{
-                    [UIView animateWithDuration:self.duration animations:^{
+                    [UIView animateWithDuration:self.transitionDuration delay:0 usingSpringWithDamping:self.Damping initialSpringVelocity:self.Velocity options:UIViewAnimationOptionCurveEaseInOut animations:^{
                         if (self.transitionMode == kLGTransitionPresent) {
                             toView.transform = CGAffineTransformIdentity;
                         }else{
@@ -148,6 +175,18 @@
                         [self transtionFinishedFromView:fromView
                                       animateTransition:transitionContext];
                     }];
+                    
+//                    [UIView animateWithDuration:self.animationDuration animations:^{
+//                        if (self.transitionMode == kLGTransitionPresent) {
+//                            toView.transform = CGAffineTransformIdentity;
+//                        }else{
+//                            [containerView bringSubviewToFront:fromView];
+//                            fromView.transform = CGAffineTransformMakeTranslation(0,-transformY);
+//                        }
+//                    } completion:^(BOOL finished) {
+//                        [self transtionFinishedFromView:fromView
+//                                      animateTransition:transitionContext];
+//                    }];
                 }
             }else{
                 [containerView bringSubviewToFront:toView];
@@ -160,13 +199,20 @@
                                       animateTransition:transitionContext];
                     }];
                 }else{
-                    [UIView animateWithDuration:self.duration animations:^{
+                    [UIView animateWithDuration:self.transitionDuration delay:0 usingSpringWithDamping:self.Damping initialSpringVelocity:self.Velocity options:UIViewAnimationOptionCurveEaseInOut animations:^{
                         fromView.transform = CGAffineTransformMakeTranslation(0, -transformY);
                         toView.transform   = CGAffineTransformIdentity;
                     } completion:^(BOOL finished) {
                         [self transtionFinishedFromView:fromView
                                       animateTransition:transitionContext];
                     }];
+//                    [UIView animateWithDuration:self.animationDuration animations:^{
+//                        fromView.transform = CGAffineTransformMakeTranslation(0, -transformY);
+//                        toView.transform   = CGAffineTransformIdentity;
+//                    } completion:^(BOOL finished) {
+//                        [self transtionFinishedFromView:fromView
+//                                      animateTransition:transitionContext];
+//                    }];
                 }
             }
             break;

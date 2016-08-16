@@ -8,6 +8,8 @@
 
 #import "threeViewController.h"
 #import "fourViewController.h"
+#import "UIView+Action.h"
+
 
 CGFloat const gestureMinimumTranslation = 20.0;
 
@@ -27,6 +29,7 @@ typedef enum : NSInteger{
 
 @interface threeViewController ()
 @property (nonatomic,assign)kPanMoveDirection direction;
+
 @end
 
 
@@ -36,27 +39,49 @@ typedef enum : NSInteger{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回"
-//                                                                            style:UIBarButtonItemStylePlain
-//                                                                           target:self
-//                                                                           action:@selector(action:)];
-//    
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"next"
-//                                                                            style:UIBarButtonItemStylePlain
-//                                                                           target:self
-//                                                                           action:@selector(rightaction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回"
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(action:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"next"
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(rightaction)];
 
-//    self.title = @"三";
+    self.title = @"三";
     
-//    [self applyBarTintColorToTheNavigationBar:[UIColor lightGrayColor]];
+    [self applyBarTintColorToTheNavigationBar:[UIColor lightGrayColor]];
     
-    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(popAction:)];
-    [gestureRecognizer setTranslation:CGPointMake(40, 0) inView:self.view];
-    [self.view addGestureRecognizer:gestureRecognizer];
+//    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(popAction:)];
+//    [gestureRecognizer setTranslation:CGPointMake(40, 0) inView:self.view];
+//    [self.view addGestureRecognizer:gestureRecognizer];
     
     self.view.userInteractionEnabled = YES;
     self.view.backgroundColor = [UIColor yellowColor];
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:view];
+    [view setViewActionWithBlock:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.transitionAnimator.dragable = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    self.transitionAnimator.dragable = NO;
+}
+
+
 
 - (void)popAction:(UIPanGestureRecognizer *)gesture
 {
@@ -142,7 +167,15 @@ typedef enum : NSInteger{
 
 - (void)rightaction
 {
-    [self.navigationController pushViewController:[[fourViewController alloc]init] animated:YES];
+    fourViewController *vc = [[fourViewController alloc]init];
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.35;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = @"push";
+//    transition.subtype = kCATransitionFromLeft;
+//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

@@ -9,6 +9,8 @@
 
 #import "CustomBackButtonNavController.h"
 #import "LGBaseViewController.h"
+#import "JZNavigationExtension.h"
+
 
 @interface CustomBackButtonNavController()<UIGestureRecognizerDelegate>
 
@@ -19,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.jz_navigationBarTransitionStyle = JZNavigationBarTransitionStyleDoppelganger;
+    self.jz_fullScreenInteractivePopGestureEnabled =YES;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated

@@ -16,7 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-km-3Cv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <color key="backgroundColor" red="0.39812277993722672" green="0.86274509803921573" blue="0.26854128797212706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ESm-yz-JDt"/>
+                                </constraints>
+                                <state key="normal" title="点击"/>
+                                <connections>
+                                    <action selector="btnaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyp-Uv-TMW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbB-se-eyn">
+                                <rect key="frame" x="0.0" y="449" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PDv-9v-WCy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lbB-se-eyn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6kZ-3N-Y7I"/>
+                            <constraint firstAttribute="trailing" secondItem="lbB-se-eyn" secondAttribute="trailing" id="GfU-sy-zYd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lbB-se-eyn" secondAttribute="bottom" constant="40" id="YB1-M2-Iao"/>
+                            <constraint firstItem="p4d-km-3Cv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bot-wc-ak7"/>
+                            <constraint firstAttribute="trailing" secondItem="p4d-km-3Cv" secondAttribute="trailing" id="enq-AM-tuE"/>
+                            <constraint firstItem="p4d-km-3Cv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rXn-NW-CYz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hRW-Dc-F4C">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Paj-Bf-1IK">
@@ -26,6 +56,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="label" destination="lbB-se-eyn" id="rIF-VZ-ngj"/>
                         <segue destination="zh3-yq-zhq" kind="push" identifier="homeID" id="kXu-Xs-WCT"/>
                     </connections>
                 </viewController>

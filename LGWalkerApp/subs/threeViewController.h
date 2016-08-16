@@ -7,7 +7,8 @@
 //
 
 #import "LGBaseViewController.h"
+#import "LGPresentTranstion.h"
 
 @interface threeViewController : LGBaseViewController
-
+@property (nonatomic,strong)LGPresentTranstion *transitionAnimator;
 @end

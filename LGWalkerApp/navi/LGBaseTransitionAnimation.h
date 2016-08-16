@@ -23,7 +23,17 @@ typedef NS_ENUM(NSInteger,LGTransitionDirection){
 };
 
 
-@interface LGBaseTransitionAnimation : NSObject <UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
+@interface LGBaseTransitionAnimation : UIPercentDrivenInteractiveTransition <UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate,UIGestureRecognizerDelegate>
+
+
+- (id)initWithModalViewController:(UIViewController *)modalViewController;
+
+/**
+ * The transition Spring animation Damping  (0.8)
+ * The transition Spring animation Velocity (0.1)
+ */
+@property (nonatomic) CGFloat Damping;
+@property (nonatomic) CGFloat Velocity;
 
 /**
  *  The transition animations of pop
@@ -34,9 +44,9 @@ typedef NS_ENUM(NSInteger,LGTransitionDirection){
 
 /**
  *  The duration of transition animations
- *  Default is 0.25s
+ *  Default is 0.4
  */
-@property (nonatomic,assign)NSTimeInterval duration;
+@property (nonatomic,assign)NSTimeInterval transitionDuration;
 
 /**
  *  The transition for Cover TransitionContextFromView
@@ -56,6 +66,17 @@ typedef NS_ENUM(NSInteger,LGTransitionDirection){
  *  Default is kLGTransitionDirectionLeft
  */
 @property (nonatomic,assign)LGTransitionDirection transitionDirection;
+
+/**
+ *  modalViewController can dragable (for Dismiss)
+ */
+@property (nonatomic, assign, getter=isDragable) BOOL dragable;
+
+/**
+ * The transition isInteractive
+ */
+@property (nonatomic, assign) BOOL isInteractive;
+
 
 -(UIView *)toView:(id<UIViewControllerContextTransitioning>)transitionContext;
 -(UIView *)fromView:(id<UIViewControllerContextTransitioning>)transitionContext;

@@ -52,13 +52,19 @@
 {
     NSLog(@"---sender");
     threeViewController *vc  = [[threeViewController alloc]init];
-//    CustomBackButtonNavController *navi = [[CustomBackButtonNavController alloc]initWithRootViewController:vc];
-    self.transition = [[LGPresentTranstion alloc]init];
+    CustomBackButtonNavController *navi = [[CustomBackButtonNavController alloc]initWithRootViewController:vc];
+    self.transition = [[LGPresentTranstion alloc]initWithModalViewController:navi];
+//    self.transition = [[LGPresentTranstion alloc]init];
     self.transition.popAnimation = self.popSwitch.isOn;
     self.transition.transitionDirection = self.currentDirection;
     self.transition.transitionCover = self.coverSwitch.isOn;
-    vc.transitioningDelegate = self.transition;
-    [self presentViewController:vc animated:YES completion:nil];
+    self.transition.dragable    = YES;
+//    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    navi.transitioningDelegate = self.transition;
+    vc.transitionAnimator = self.transition;
+    [self presentViewController:navi animated:YES completion:^{
+//        self.transition.transitionDirection = kLGTransitionDirectionRight;
+    }];
 }
 
 - (IBAction)upAction:(id)sender {

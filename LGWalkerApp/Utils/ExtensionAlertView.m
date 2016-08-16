@@ -134,9 +134,10 @@ static char alertKey;
 {
     if (buttonIndex != alertView.cancelButtonIndex) {
         void (^clickBlock)(NSString *str) = [alertView gethandleAction];
-        NSString *text = [alertView textFieldAtIndex:0].text;
-        if (!text) {
-            text = @"";
+        
+        NSString *text = @"";
+        if (alertView.alertViewStyle ==UIAlertViewStylePlainTextInput) {
+            text = [alertView textFieldAtIndex:0].text;
         }
         if (clickBlock) {
             clickBlock(text);

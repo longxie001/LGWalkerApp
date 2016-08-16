@@ -32,6 +32,16 @@
 		5D4629D21D4AE7C600F4F11A /* LGPresentTranstion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4629D11D4AE7C600F4F11A /* LGPresentTranstion.m */; };
 		5D4629DA1D4AEEC400F4F11A /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4629D91D4AEEC400F4F11A /* pop.framework */; };
 		5D4629DB1D4AEECC00F4F11A /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4629D91D4AEEC400F4F11A /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DB68C561D61456A0060643C /* LGRuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C551D61456A0060643C /* LGRuntimeTest.m */; };
+		5DB68C5C1D614B9C0060643C /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C5B1D614B9C0060643C /* NSObject+Extension.m */; };
+		5DB68C601D62B24C0060643C /* JZNavigationExtension in Resources */ = {isa = PBXBuildFile; fileRef = 5DB68C5F1D62B24C0060643C /* JZNavigationExtension */; };
+		5DB68C741D62B2DE0060643C /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C671D62B2DE0060643C /* _JZNavigationInteractiveTransition.m */; };
+		5DB68C751D62B2DE0060643C /* _JZValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C691D62B2DE0060643C /* _JZValue.m */; };
+		5DB68C761D62B2DE0060643C /* NSNumber+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C6B1D62B2DE0060643C /* NSNumber+JZExtension.m */; };
+		5DB68C771D62B2DE0060643C /* UINavigationBar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C6D1D62B2DE0060643C /* UINavigationBar+JZExtension.m */; };
+		5DB68C781D62B2DE0060643C /* UIToolbar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C6F1D62B2DE0060643C /* UIToolbar+JZExtension.m */; };
+		5DB68C791D62B2DE0060643C /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C711D62B2DE0060643C /* UINavigationController+JZExtension.m */; };
+		5DB68C7A1D62B2DE0060643C /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB68C731D62B2DE0060643C /* UIViewController+JZExtension.m */; };
 		5DD70CF71D3F084F006CEC5B /* threeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD70CF61D3F084F006CEC5B /* threeViewController.m */; };
 		5DD70CFA1D3F09B0006CEC5B /* fourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD70CF91D3F09B0006CEC5B /* fourViewController.m */; };
 		5DD70D011D41AD8B006CEC5B /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD70D001D41AD8B006CEC5B /* GQGesVCTransition.m */; };
@@ -91,6 +101,27 @@
 		5D4629D01D4AE7C600F4F11A /* LGPresentTranstion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPresentTranstion.h; sourceTree = "<group>"; };
 		5D4629D11D4AE7C600F4F11A /* LGPresentTranstion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPresentTranstion.m; sourceTree = "<group>"; };
 		5D4629D91D4AEEC400F4F11A /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = "<group>"; };
+		5DB68C541D61456A0060643C /* LGRuntimeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRuntimeTest.h; sourceTree = "<group>"; };
+		5DB68C551D61456A0060643C /* LGRuntimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGRuntimeTest.m; sourceTree = "<group>"; };
+		5DB68C5A1D614B9C0060643C /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		5DB68C5B1D614B9C0060643C /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		5DB68C5F1D62B24C0060643C /* JZNavigationExtension */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JZNavigationExtension; path = /Users/LG/Desktop/LGWalkerApp/LGWalkerApp/navi/JZNavigationExtension; sourceTree = "<absolute>"; };
+		5DB68C631D62B2DE0060643C /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
+		5DB68C651D62B2DE0060643C /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
+		5DB68C661D62B2DE0060643C /* _JZNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		5DB68C671D62B2DE0060643C /* _JZNavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZNavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		5DB68C681D62B2DE0060643C /* _JZValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZValue.h; sourceTree = "<group>"; };
+		5DB68C691D62B2DE0060643C /* _JZValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZValue.m; sourceTree = "<group>"; };
+		5DB68C6A1D62B2DE0060643C /* NSNumber+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JZExtension.h"; sourceTree = "<group>"; };
+		5DB68C6B1D62B2DE0060643C /* NSNumber+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JZExtension.m"; sourceTree = "<group>"; };
+		5DB68C6C1D62B2DE0060643C /* UINavigationBar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JZExtension.h"; sourceTree = "<group>"; };
+		5DB68C6D1D62B2DE0060643C /* UINavigationBar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JZExtension.m"; sourceTree = "<group>"; };
+		5DB68C6E1D62B2DE0060643C /* UIToolbar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+JZExtension.h"; sourceTree = "<group>"; };
+		5DB68C6F1D62B2DE0060643C /* UIToolbar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+JZExtension.m"; sourceTree = "<group>"; };
+		5DB68C701D62B2DE0060643C /* UINavigationController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JZExtension.h"; sourceTree = "<group>"; };
+		5DB68C711D62B2DE0060643C /* UINavigationController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JZExtension.m"; sourceTree = "<group>"; };
+		5DB68C721D62B2DE0060643C /* UIViewController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JZExtension.h"; sourceTree = "<group>"; };
+		5DB68C731D62B2DE0060643C /* UIViewController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JZExtension.m"; sourceTree = "<group>"; };
 		5DD70CF51D3F084F006CEC5B /* threeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threeViewController.h; sourceTree = "<group>"; };
 		5DD70CF61D3F084F006CEC5B /* threeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threeViewController.m; sourceTree = "<group>"; };
 		5DD70CF81D3F09B0006CEC5B /* fourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourViewController.h; sourceTree = "<group>"; };
@@ -147,6 +178,10 @@
 				5D3EC5891CD872C9001E378D /* TabBarViewController.m */,
 				5D3EC57D1CD84C76001E378D /* LGBaseViewController.h */,
 				5D3EC57E1CD84C76001E378D /* LGBaseViewController.m */,
+				5DB68C541D61456A0060643C /* LGRuntimeTest.h */,
+				5DB68C551D61456A0060643C /* LGRuntimeTest.m */,
+				5DB68C5A1D614B9C0060643C /* NSObject+Extension.h */,
+				5DB68C5B1D614B9C0060643C /* NSObject+Extension.m */,
 				5D3EC5871CD85128001E378D /* navi */,
 				5D3EC5831CD84E45001E378D /* subs */,
 				5D3EC56F1CD84A6A001E378D /* Main.storyboard */,
@@ -191,6 +226,7 @@
 		5D3EC5871CD85128001E378D /* navi */ = {
 			isa = PBXGroup;
 			children = (
+				5DB68C621D62B2DE0060643C /* JZNavigationExtension */,
 				5DD70CFF1D41AD8B006CEC5B /* GQGesVCTransition.h */,
 				5DD70D001D41AD8B006CEC5B /* GQGesVCTransition.m */,
 				5D4629C21D49D7CD00F4F11A /* UIViewController+BackButtonHandler.h */,
@@ -230,6 +266,37 @@
 				5D4629D91D4AEEC400F4F11A /* pop.framework */,
 			);
 			path = "SDK&framework";
+			sourceTree = "<group>";
+		};
+		5DB68C621D62B2DE0060643C /* JZNavigationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5DB68C631D62B2DE0060643C /* JZNavigationExtension.h */,
+				5DB68C641D62B2DE0060643C /* Private */,
+				5DB68C701D62B2DE0060643C /* UINavigationController+JZExtension.h */,
+				5DB68C711D62B2DE0060643C /* UINavigationController+JZExtension.m */,
+				5DB68C721D62B2DE0060643C /* UIViewController+JZExtension.h */,
+				5DB68C731D62B2DE0060643C /* UIViewController+JZExtension.m */,
+			);
+			path = JZNavigationExtension;
+			sourceTree = "<group>";
+		};
+		5DB68C641D62B2DE0060643C /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				5DB68C651D62B2DE0060643C /* _JZ-objc-internal.h */,
+				5DB68C661D62B2DE0060643C /* _JZNavigationInteractiveTransition.h */,
+				5DB68C671D62B2DE0060643C /* _JZNavigationInteractiveTransition.m */,
+				5DB68C681D62B2DE0060643C /* _JZValue.h */,
+				5DB68C691D62B2DE0060643C /* _JZValue.m */,
+				5DB68C6A1D62B2DE0060643C /* NSNumber+JZExtension.h */,
+				5DB68C6B1D62B2DE0060643C /* NSNumber+JZExtension.m */,
+				5DB68C6C1D62B2DE0060643C /* UINavigationBar+JZExtension.h */,
+				5DB68C6D1D62B2DE0060643C /* UINavigationBar+JZExtension.m */,
+				5DB68C6E1D62B2DE0060643C /* UIToolbar+JZExtension.h */,
+				5DB68C6F1D62B2DE0060643C /* UIToolbar+JZExtension.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4629CF1D49FC7900F4F11A /* launch.jpg in Resources */,
+				5DB68C601D62B24C0060643C /* JZNavigationExtension in Resources */,
 				5D3EC5761CD84A6A001E378D /* LaunchScreen.storyboard in Resources */,
 				5D3EC5731CD84A6A001E378D /* Assets.xcassets in Resources */,
 				5D3EC5711CD84A6A001E378D /* Main.storyboard in Resources */,
@@ -304,21 +372,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB68C741D62B2DE0060643C /* _JZNavigationInteractiveTransition.m in Sources */,
 				5D4629C81D49DCD500F4F11A /* UIView+Action.m in Sources */,
 				5D3EC56E1CD84A6A001E378D /* ViewController.m in Sources */,
 				5D3EC5861CD84F2C001E378D /* firstViewController.m in Sources */,
+				5DB68C7A1D62B2DE0060643C /* UIViewController+JZExtension.m in Sources */,
 				5D3EC58A1CD872C9001E378D /* TabBarViewController.m in Sources */,
+				5DB68C791D62B2DE0060643C /* UINavigationController+JZExtension.m in Sources */,
 				5D3EC5A21CD992CD001E378D /* LGBaseTransitionAnimation.m in Sources */,
 				5D4629D21D4AE7C600F4F11A /* LGPresentTranstion.m in Sources */,
 				5D3EC56B1CD84A6A001E378D /* AppDelegate.m in Sources */,
 				5D3EC58D1CD879CF001E378D /* secondViewController.m in Sources */,
 				5D3EC57F1CD84C76001E378D /* LGBaseViewController.m in Sources */,
 				5DD70CF71D3F084F006CEC5B /* threeViewController.m in Sources */,
+				5DB68C771D62B2DE0060643C /* UINavigationBar+JZExtension.m in Sources */,
+				5DB68C781D62B2DE0060643C /* UIToolbar+JZExtension.m in Sources */,
+				5DB68C561D61456A0060643C /* LGRuntimeTest.m in Sources */,
 				5D4629CB1D49DCE300F4F11A /* ExtensionAlertView.m in Sources */,
 				5D3EC5681CD84A6A001E378D /* main.m in Sources */,
 				5DD70D011D41AD8B006CEC5B /* GQGesVCTransition.m in Sources */,
 				5DD70CFA1D3F09B0006CEC5B /* fourViewController.m in Sources */,
 				5D3EC5821CD84D0A001E378D /* CustomBackButtonNavController.m in Sources */,
+				5DB68C751D62B2DE0060643C /* _JZValue.m in Sources */,
+				5DB68C761D62B2DE0060643C /* NSNumber+JZExtension.m in Sources */,
+				5DB68C5C1D614B9C0060643C /* NSObject+Extension.m in Sources */,
 				5D4629C41D49D7CD00F4F11A /* UIViewController+BackButtonHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
