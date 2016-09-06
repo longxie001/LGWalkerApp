@@ -1,23 +1,23 @@
 //
-//  TabBarViewController.m
+//  Others.m
 //  LGWalkerApp
 //
-//  Created by walker on 16/5/3.
+//  Created by Walker on 16/8/30.
 //  Copyright © 2016年 LGwalker. All rights reserved.
 //
 
-#import "TabBarViewController.h"
+#import "Others.h"
 
-@interface TabBarViewController ()
+@interface Others ()
 
 @end
 
-@implementation TabBarViewController
+@implementation Others
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = NSStringFromClass([self class]);
 }
 
 - (void)didReceiveMemoryWarning {

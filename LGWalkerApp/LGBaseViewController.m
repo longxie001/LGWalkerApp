@@ -22,7 +22,7 @@
 
     UIImage *backButtonBackgroundImage = [UIImage imageNamed:@"Menu"];
     // The background should be pinned to the left and not stretch.
-    backButtonBackgroundImage = [backButtonBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, backButtonBackgroundImage.size.width - 1, 0, 0)];
+    backButtonBackgroundImage = [backButtonBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(10, backButtonBackgroundImage.size.width -20, 10, 10)];
     
     id appearance;
     if ([[UIDevice currentDevice].systemVersion integerValue]>=9) {
@@ -38,12 +38,6 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     //    [self applyBarTintColorToTheNavigationBar:[UIColor redColor]];
-}
-
-
-- (BOOL)navigationShouldPopOnBackButton
-{
-    return YES;
 }
 
 - (void)applyBarTintColorToTheNavigationBar:(UIColor *)color

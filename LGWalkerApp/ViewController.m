@@ -7,75 +7,60 @@
 //
 
 #import "ViewController.h"
-#import "CustomBackButtonNavController.h"
 #import <pop/pop.h>
+#import "LGCustomPayView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UIView  *baseView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-
+@property (nonatomic,strong)LGCustomPayView *payView;
+@property (nonatomic,strong)NSArray *dataArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
+static NSString *cellid = @"cellid";
 @implementation ViewController
 
-- (void)viewDidAppear:(BOOL)animated
+- (NSArray *)dataArray
 {
-    [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"showOrHideTabbar"
-                                                       object:nil
-                                                     userInfo:@{@"show":@YES}];
+    if (!_dataArray) {
+        _dataArray = @[@"LGMasonry",
+                       @"PopAnimation",
+                       @"Others"];
+    }
+    return _dataArray;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"home";
-    
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
-    [array addObject:@"6"];
-    [array addObject:@"8"];
-    [array addObject:nil];
-    
-    NSLog(@"--%@",array);
-    
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
-    [dict setValue:nil forKey:@"hello"];
-    dict[@"world"] = nil;
-    [dict setObject:nil forKey:@"today"];
-    NSLog(@"--%@",dict);
-    
-    _baseView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 320, 0)];
-    _baseView.backgroundColor = [UIColor grayColor];
-    for (int i =0; i<15; i++) {
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 20*i+10, 320,10)];
-        view.backgroundColor = [UIColor whiteColor];
-        [_baseView addSubview:view];
-    }
-    _baseView.clipsToBounds = YES;
-    [self.view addSubview:_baseView];
-    
+    self.tableView.rowHeight = 60;
 }
 
-- (IBAction)btnaction:(id)sender
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [UIView animateWithDuration:0.4 animations:^{
-        _baseView.frame = CGRectMake(0, 100, 320, 400);
-    }];
-    
-    
+    return self.dataArray.count;
 }
 
-- (IBAction)ViewControllerUnwindSegue:(UIStoryboardSegue *)unwindSegue {
-    NSLog(@"unwindSegue");
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid forIndexPath:indexPath];
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
 }
 
 - (IBAction)edit:(id)sender
 {
-    [UIView animateWithDuration:0.4 animations:^{
-         _baseView.frame = CGRectMake(0, 100, 320, 0);
-    }];
     [self performSegueWithIdentifier:@"homeID" sender:self];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    LGBaseViewController *vc = [[NSClassFromString(self.dataArray[indexPath.row]) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

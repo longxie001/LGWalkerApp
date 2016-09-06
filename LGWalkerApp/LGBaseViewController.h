@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+BackButtonHandler.h"
 
 @interface LGBaseViewController : UIViewController
 

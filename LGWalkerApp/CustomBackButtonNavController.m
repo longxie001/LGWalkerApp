@@ -23,16 +23,15 @@
     [super viewDidLoad];
     
     self.jz_navigationBarTransitionStyle = JZNavigationBarTransitionStyleDoppelganger;
-    self.jz_fullScreenInteractivePopGestureEnabled =YES;
+//    self.jz_fullScreenInteractivePopGestureEnabled =YES;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    [super pushViewController:viewController animated:animated];
-    if (self.viewControllers.count>1) {
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"showOrHideTabbar"
-                                                           object:nil userInfo:@{@"show":@NO}];
+    if (self.childViewControllers.count >=1 ) {
+        viewController.hidesBottomBarWhenPushed = YES;
     }
+    [super pushViewController:viewController animated:animated];
 }
 
 @end

@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    [GQGesVCTransition validateGesBackWithType:GQGesVCTransitionTypePanWithPercentLeft withScreenWidthPercent:@0.5 withRequestFailToLoopScrollView:YES];
+   [GQGesVCTransition validateGesBackWithType:GQGesVCTransitionTypePanWithPercentLeft withScreenWidthPercent:@0.5 withRequestFailToLoopScrollView:YES];
 //    
     
     return YES;
